@@ -10,16 +10,17 @@ import com.azstudio.kotlinsample.viewModel.SampleViewModel
 import com.azstudio.kotlinsample.viewModel.SampleViewModelFactory
 
 class AddItemActivity : AppCompatActivity() {
-    private val sampleViewModel: SampleViewModel by viewModels{
+    private val sampleViewModel: SampleViewModel by viewModels {
         SampleViewModelFactory((application as SampleApplication).repository)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_item)
-    val sample= SampleData(
-        "sadff"
+        val sample = SampleData(
+            "sadff"
 
-    )
+        )
         sampleViewModel.insertSampleData(sample)
     }
 }
