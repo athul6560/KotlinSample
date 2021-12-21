@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.azstudio.kotlinsample.data.SampleData
+import com.azstudio.kotlinsample.entities.SampleData
 
 @Dao
 interface SampleDao {

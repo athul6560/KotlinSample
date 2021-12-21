@@ -4,12 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.azstudio.kotlinsample.data.SampleData
+import com.azstudio.kotlinsample.entities.SampleData
 import com.azstudio.kotlinsample.roomdb.dao.SampleDao
 
 @Database(entities = [SampleData::class], version = 1, exportSchema = false)
 abstract  class SampleDatabase  : RoomDatabase(){
-    abstract val sampleData: SampleDao
+    abstract val sampleDao: SampleDao
 
     companion object {
 
