@@ -44,7 +44,7 @@ class ViewListActivity : AppCompatActivity() {
 
     private fun setAdapter(sampleDataList: List<SampleData>) {
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
-        binding.rvSampleDataList.setLayoutManager(layoutManager)
+        binding.rvSampleDataList.layoutManager = layoutManager
         val rvAdapter = SampleDataListAdapter(sampleDataList)
         binding.rvSampleDataList.adapter = rvAdapter
     }
