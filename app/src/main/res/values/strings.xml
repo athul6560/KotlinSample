@@ -2,4 +2,5 @@
     <string name="app_name">Kotlin Sample</string>
     <string name="hint">SampleData</string>
     <string name="submit">Submit</string>
+    <string name="view_list">View List</string>
 </resources>

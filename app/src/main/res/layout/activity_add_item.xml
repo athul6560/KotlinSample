@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_sample_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint"
@@ -28,6 +29,15 @@
         android:layout_height="wrap_content"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/view_list"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

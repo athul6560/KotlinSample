@@ -1,8 +1,6 @@
 package com.azstudio.kotlinsample.viewModel
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.azstudio.kotlinsample.entities.SampleData
 import com.azstudio.kotlinsample.repo.SampleRepo
 import kotlinx.coroutines.launch
@@ -12,7 +10,14 @@ class SampleViewModel(private val repo: SampleRepo) : ViewModel() {
     fun insertSampleData(sampleData: SampleData) = viewModelScope.launch {
         repo.insertSampleData(sampleData)
     }
+
+    val allSampleList:LiveData<List<SampleData>> = repo.allSampleData.asLiveData()
 }
+
+
+
+
+
 
 class SampleViewModelFactory(private val repo: SampleRepo) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

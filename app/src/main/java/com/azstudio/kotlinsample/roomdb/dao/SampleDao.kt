@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.azstudio.kotlinsample.entities.SampleData
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SampleDao {
@@ -16,4 +17,7 @@ interface SampleDao {
 
     @Query("DELETE FROM sample_table")
     suspend  fun clear()
+
+    @Query("SELECT * FROM SAMPLE_TABLE")
+    fun getAllSampleData(): Flow<List<SampleData>>
 }
