@@ -1,10 +1,9 @@
 package com.azstudio.kotlinsample.view.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.azstudio.kotlinsample.R
+import androidx.appcompat.app.AppCompatActivity
 import com.azstudio.kotlinsample.Utils.Constants.EXTRA_MESSAGE
 import com.azstudio.kotlinsample.application.SampleApplication
 import com.azstudio.kotlinsample.databinding.ActivityAddItemBinding
